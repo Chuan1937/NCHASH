@@ -81,4 +81,10 @@ BSD 3-Clause
 
 ## References
 
-Snoke, J. A. (2003, 2007). HASH v1.2 Fortran package.
+Hardebeck, Jeanne L. and Peter M. Shearer, A new method for determining firstmotion
+focal mechanisms, Bulletin of the Seismological Society of America, 92,
+2264-2276, 2002.
+
+Hardebeck, Jeanne L. and Peter M. Shearer, Using S/P Amplitude Ratios to
+Constrain the Focal Mechanisms of Small Earthquakes, Bulletin of the
+Seismological Society of America, 93, 2434-2444, 2003.
