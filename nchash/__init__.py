@@ -1,0 +1,63 @@
+"""
+NCHASH - Python implementation of HASH v1.2 for earthquake focal mechanism inversion.
+
+This package provides a pure Python implementation of the HASH algorithm for
+determining earthquake focal mechanisms from polarities, with performance
+optimizations using numba and numpy.
+
+Author: Xingchen He
+License: BSD 3-Clause
+"""
+
+__version__ = "1.0.0"
+__author__ = "Xingchen He"
+
+from .core import (
+    focalmc,
+    get_misfit,
+    get_gap,
+)
+from .uncertainty import (
+    mech_prob,
+    mech_avg,
+    mech_rot,
+)
+from .velocity import (
+    make_table,
+    get_tts,
+)
+from .utils import (
+    cross_product,
+    to_cartesian,
+    fp_coord,
+    normal_distribution_random,
+    strike_dip_rake_to_vectors,
+    vectors_to_strike_dip_rake,
+)
+from .io import (
+    read_phase_file,
+    read_station_file,
+    read_velocity_model,
+    write_mechanism_output,
+)
+
+__all__ = [
+    "focalmc",
+    "mech_prob",
+    "mech_avg",
+    "mech_rot",
+    "get_misfit",
+    "get_gap",
+    "make_table",
+    "get_tts",
+    "cross_product",
+    "to_cartesian",
+    "fp_coord",
+    "normal_distribution_random",
+    "strike_dip_rake_to_vectors",
+    "vectors_to_strike_dip_rake",
+    "read_phase_file",
+    "read_station_file",
+    "read_velocity_model",
+    "write_mechanism_output",
+]
