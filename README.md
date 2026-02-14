@@ -118,6 +118,10 @@ nchash/
 HASH_complete/     # Complete Fortran code with examples
 ```
 
+## Author
+
+He XingChen
+
 ## License
 
 BSD 3-Clause

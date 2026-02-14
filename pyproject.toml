@@ -1,23 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "nchash"
+name = "cnchash"
 version = "1.0.0"
-description = "Python implementation of HASH v1.2 for earthquake focal mechanism determination"
+description = "Python implementation of HASH for earthquake focal mechanism determination"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "BSD 3-Clause"}
 authors = [
-    {name = "NCHASH Developers"}
+    {name = "He XingChen", email = "example@example.com"}
 ]
-keywords = ["seismology", "earthquake", "focal-mechanism", "hash"]
+keywords = [
+    "seismology",
+    "earthquake",
+    "focal-mechanism",
+    "hash",
+    "beachball",
+    "p-wave",
+    "polarity"
+]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Physics",
 ]
 
 dependencies = [
@@ -31,7 +45,29 @@ dev = [
     "ruff>=0.1.0",
     "pytest>=7.0.0",
 ]
+docs = [
+    "sphinx>=5.0",
+    "sphinx-rtd-theme>=1.0",
+    "myst-parser>=1.0",
+]
 
+[project.urls]
+Homepage = "https://github.com/Chuan1937/CNCHASH"
+Documentation = "https://cnchash.readthedocs.io"
+Repository = "https://github.com/Chuan1937/CNCHASH"
+Issues = "https://github.com/Chuan1937/CNCHASH/issues"
+
+[project.scripts]
+nchash = "nchash.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nchash*"]
+
+[tool.setuptools.package-data]
+nchash = ["py.typed"]
+
+# Ruff configuration
 [tool.ruff]
 target-version = "py310"
 line-length = 100
@@ -57,3 +93,8 @@ known-first-party = ["nchash"]
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
+
+# Pytest configuration
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

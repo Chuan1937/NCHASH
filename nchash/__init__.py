@@ -5,12 +5,12 @@ This package provides a pure Python implementation of the HASH algorithm for
 determining earthquake focal mechanisms from polarities, with performance
 optimizations using numba and numpy.
 
-Author: Xingchen He
+Author: He XingChen
 License: BSD 3-Clause
 """
 
 __version__ = "1.0.0"
-__author__ = "Xingchen He"
+__author__ = "He XingChen"
 
 from .amp_subs import (
     focalamp_mc,
@@ -24,6 +24,7 @@ from .core import (
 from .driver import (
     run_hash,
     run_hash_with_amp,
+    run_hash_from_file,
 )
 from .io import (
     read_phase_file,
@@ -50,11 +51,17 @@ from .velocity import (
 )
 
 __all__ = [
+    # Main functions
+    "run_hash",
+    "run_hash_with_amp",
+    "run_hash_from_file",
+    # Core algorithms
     "focalmc",
     "focalamp_mc",
     "mech_prob",
     "mech_avg",
     "mech_rot",
+    # Utilities
     "get_misfit",
     "get_misf_amp",
     "get_gap",
@@ -66,10 +73,9 @@ __all__ = [
     "normal_distribution_random",
     "strike_dip_rake_to_vectors",
     "vectors_to_strike_dip_rake",
+    # I/O
     "read_phase_file",
     "read_station_file",
     "read_velocity_model",
     "write_mechanism_output",
-    "run_hash",
-    "run_hash_with_amp",
 ]
