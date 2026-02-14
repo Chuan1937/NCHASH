@@ -1,6 +1,6 @@
 # NCHASH
 
-Python implementation of HASH v1.2 for earthquake focal mechanism determination from P-wave polarities.
+Python implementation of HASH for earthquake focal mechanism determination from P-wave polarities.
 
 ![Python](https://img.shields.io/badge/python-3.10+-orange.svg)
 ![License](https://img.shields.io/badge/license-BSD%203--blue.svg)
@@ -89,6 +89,14 @@ print(f"Amplitude misfit: {result['mavg']:.2f}")
 - Quality rating (A-D, E, F)
 - Multiple phase file formats
 - Core algorithm matches Fortran exactly
+
+## Documentation
+
+See [docs/README.md](docs/README.md) for full documentation including:
+- API reference
+- Algorithm details
+- File format specifications
+- Performance optimization
 
 ## Run Tests
 
